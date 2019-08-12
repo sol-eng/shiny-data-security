@@ -1,0 +1,12 @@
+name: sales_dashboard
+title: Sales Dashboard
+username: edgar
+account: edgar
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 2759
+bundleId: 26462
+url: https://colorado.rstudio.com/rsc/content/2759/
+when: 1565642598.54311
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,308 @@
+order_number,month_relative,customer_name,country,city,state,postal_code,status,total_sale
+10100,28,Online Diecast Creations Co.,United States,Nashua,NH,62005,Shipped,9982.25
+10101,28,"Blauer See Auto, Co.",Germany,Frankfurt,NA,60528,Shipped,8976.96
+10102,28,Vitachrome Inc.,United States,New York,NY,10022,Shipped,5955.74
+10103,28,Baane Mini Imports,Norway,Stavern,NA,4110,Shipped,47886.21
+10104,28,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,35084.8
+10105,27,Danish Wholesale Imports,Denmark,Kobenhavn,NA,1734,Shipped,46614.17
+10106,27,Rovelli Gifts,Italy,Bergamo,NA,24100,Shipped,52286.770000000004
+10107,27,Land of Toys Inc.,United States,New York,NY,10022,Shipped,21135.86
+10108,26,Cruz & Sons Co.,Philippines,Makati City,NA,1227 MM,Shipped,47185.22
+10109,26,Motor Mint Distributors Inc.,United States,Philadelphia,PA,71270,Shipped,19230.9
+10110,26,"AV Stores, Co.",United Kingdom,Manchester,NA,EC2 5NT,Shipped,43515.07
+10111,26,Mini Wheels Co.,United States,San Francisco,CA,NA,Shipped,17898.58
+10112,26,"Volvo Model Replicas, Co",Sweden,Lule,NA,S-958 22,Shipped,5200
+10113,26,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,11066.46
+10114,25,"La Corne D'abondance, Co.",France,Paris,NA,75012,Shipped,30772.03
+10115,25,Classic Legends Inc.,United States,New York,NY,10022,Shipped,19559.92
+10116,25,Royale Belge,Belgium,Charleroi,NA,B-6000,Shipped,1711.26
+10117,25,"Dragon Souveniers, Ltd.",Singapore,Singapore,NA,79903,Shipped,34651.61
+10118,25,Enaco Distributors,Spain,Barcelona,NA,8022,Shipped,3600
+10119,25,Salzburg Collectables,Austria,Salzburg,NA,5020,Shipped,35608.22
+10120,25,"Australian Collectors, Co.",Australia,Melbourne,Victoria,3004,Shipped,43517.99
+10121,24,Reims Collectables,France,Reims,NA,51100,Shipped,15687.96
+10122,24,Marseille Mini Autos,France,Marseille,NA,13008,Shipped,42888.13
+10123,24,Atelier graphique,France,Nantes,NA,44000,Shipped,13593.5
+10124,24,Signal Gift Stores,United States,Las Vegas,NV,83030,Shipped,31956.780000000002
+10125,24,"Australian Collectors, Co.",Australia,Melbourne,Victoria,3004,Shipped,6600
+10126,24,"Corrida Auto Replicas, Ltd",Spain,Madrid,NA,28023,Shipped,52927.75
+10127,23,Muscle Machine Inc,United States,New York,NY,10022,Shipped,46314.64
+10128,23,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,15266.88
+10129,23,"Stylish Desk Decors, Co.",United Kingdom,London,NA,WX3 6FW,Shipped,29750.3
+10130,23,Auto-Moto Classics Inc.,United States,Houston,MA,58339,Shipped,7153.6
+10131,23,Gift Ideas Corp.,United States,Glendale,CT,97561,Shipped,19241.69
+10133,23,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,21825.73
+10134,22,Lyon Souveniers,France,Paris,NA,75508,Shipped,20381.93
+10135,22,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,49766.32
+10136,22,Alpha Cognac,France,Toulouse,NA,31000,Shipped,10200
+10137,22,Reims Collectables,France,Reims,NA,51100,Shipped,12475.26
+10139,22,Souveniers And Things Co.,Australia,Sydney,NSW,2067,Shipped,23038.57
+10140,22,Technics Stores Inc.,United States,Burlingame,CA,94217,Shipped,34007.65
+10141,21,Suominen Souveniers,Finland,Espoo,NA,FIN-02271,Shipped,25366.19
+10142,21,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,48781.45
+10143,21,Mini Creations Ltd.,United States,New Bedford,MA,50553,Shipped,42578.43
+10144,21,Royale Belge,Belgium,Charleroi,NA,B-6000,Shipped,1637.2
+10145,21,Toys4GrownUps.com,United States,Pasadena,CA,90003,Shipped,47663.05
+10146,20,Gift Ideas Corp.,United States,Glendale,CT,97561,Shipped,6055.58
+10147,20,Collectables For Less Inc.,United States,Houston,MA,58339,Shipped,28839.51
+10148,20,"Anna's Decorations, Ltd",Australia,Sydney,NSW,2060,Shipped,38062.520000000004
+10149,20,Signal Collectibles Ltd.,United States,Brisbane,CA,94217,Shipped,27636.18
+10150,20,"Dragon Souveniers, Ltd.",Singapore,Singapore,NA,79903,Shipped,32318.18
+10151,20,"Oulu Toy Supplies, Inc.",Finland,Oulu,NA,90110,Shipped,29729.07
+10152,20,"Australian Gift Network, Co",Australia,South Brisbane,Queensland,4101,Shipped,9114.1
+10153,20,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,39290.72
+10154,19,Boards & Toys Co.,United States,Glendale,CA,92561,Shipped,5142.15
+10155,19,"Toys of Finland, Co.",Finland,Helsinki,NA,21240,Shipped,36949.61
+10156,19,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,5620.4
+10158,19,Baane Mini Imports,Norway,Stavern,NA,4110,Shipped,1474.66
+10159,19,Corporate Gift Ideas Co.,United States,San Francisco,CA,NA,Shipped,48748.59
+10160,19,"Men 'R' US Retailers, Ltd.",United States,Los Angeles,CA,NA,Shipped,20018.9
+10161,19,Heintze Collectables,Denmark,Aaarhus,NA,8200,Shipped,32773.21
+10162,19,Corporate Gift Ideas Co.,United States,San Francisco,CA,NA,Shipped,27983.18
+10163,19,Classic Legends Inc.,United States,New York,NY,10022,Shipped,20703.18
+10164,19,Mini Auto Werke,Austria,Graz,NA,8010,Resolved,24703.2
+10165,19,"Dragon Souveniers, Ltd.",Singapore,Singapore,NA,79903,Shipped,57334.56
+10166,19,FunGiftIdeas.com,United States,New Bedford,MA,50553,Shipped,9116.98
+10167,19,Scandinavian Gift Ideas,Sweden,Boras,NA,S-844 67,Cancelled,44355.48
+10168,19,Technics Stores Inc.,United States,Burlingame,CA,94217,Shipped,55176.87
+10169,18,"Anna's Decorations, Ltd",Australia,Sydney,NSW,2060,Shipped,35656.6
+10170,18,Mini Auto Werke,Austria,Graz,NA,8010,Shipped,13462.8
+10171,18,Quebec Home Shopping Network,Canada,Montreal,Quebec,H1J 1C3,Shipped,12177.64
+10172,18,Gift Depot Inc.,United States,Bridgewater,CT,97562,Shipped,22534.28
+10173,18,Rovelli Gifts,Italy,Bergamo,NA,24100,Shipped,34788.07
+10174,18,"Australian Gift Network, Co",Australia,South Brisbane,Queensland,4101,Shipped,18974.54
+10175,18,"Stylish Desk Decors, Co.",United Kingdom,London,NA,WX3 6FW,Shipped,36243
+10176,18,L'ordine Souveniers,Italy,Reggio Emilia,NA,42100,Shipped,29513.78
+10177,18,CAF Imports,Spain,Madrid,NA,28023,Shipped,31555.72
+10178,18,Alpha Cognac,France,Toulouse,NA,31000,Shipped,34128.52
+10180,18,Daedalus Designs Imports,France,Lille,NA,59000,Shipped,38803.1
+10181,18,Herkku Gifts,Norway,Bergen,NA,N 5804,Shipped,46254.81
+10182,18,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,43963.77
+10183,18,"Classic Gift Ideas, Inc",United States,Philadelphia,PA,71270,Shipped,33327.44
+10184,18,"Iberia Gift Imports, Corp.",Spain,Sevilla,NA,41101,Shipped,42463.9
+10185,18,Mini Creations Ltd.,United States,New Bedford,MA,50553,Shipped,43881.98
+10186,18,"Double Decker Gift Stores, Ltd",United Kingdom,London,NA,WA1 1DP,Shipped,23164
+10188,18,Herkku Gifts,Norway,Bergen,NA,N 5804,Shipped,28461.52
+10189,18,Toys4GrownUps.com,United States,Pasadena,CA,90003,Shipped,2800
+10190,18,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,10986.56
+10191,18,"Toms Spezialitten, Ltd",Germany,Koln,NA,50739,Shipped,25879.94
+10192,18,Online Diecast Creations Co.,United States,Nashua,NH,62005,Shipped,51093.99
+10193,18,"Australian Collectables, Ltd",Australia,Glen Waverly,Victoria,3150,Shipped,34062.98
+10194,18,"Saveley & Henriot, Co.",France,Lyon,NA,69004,Shipped,33724.08
+10195,18,Mini Classics,United States,White Plains,NY,24067,Shipped,31419.68
+10196,18,Super Scale Inc.,United States,New Haven,CT,97823,Shipped,29576.14
+10197,18,Enaco Distributors,Spain,Barcelona,NA,8022,Shipped,42321.01
+10198,18,Cruz & Sons Co.,Philippines,Makati City,NA,1227 MM,Shipped,18983.42
+10199,17,West Coast Collectables Co.,United States,Burbank,CA,94019,Shipped,8234.560000000001
+10201,17,Mini Wheels Co.,United States,San Francisco,CA,NA,Shipped,19659.84
+10203,17,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,34720.63
+10204,17,Muscle Machine Inc,United States,New York,NY,10022,Shipped,52724.55
+10205,17,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,12756.64
+10206,17,Canadian Gift Exchange Network,Canada,Vancouver,BC,V3F 2K1,Shipped,31320.89
+10207,17,Diecast Collectables,United States,Boston,MA,51003,Shipped,50700.1
+10208,16,"Saveley & Henriot, Co.",France,Lyon,NA,69004,Shipped,46291.6
+10209,16,"Men 'R' US Retailers, Ltd.",United States,Los Angeles,CA,NA,Shipped,22074.88
+10210,16,Osaka Souveniers Co.,Japan,Osaka,Osaka,530-0003,Shipped,44120.65
+10211,16,Auto Canal Petit,France,Paris,NA,75016,Shipped,43134.62
+10212,16,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,54145.94
+10213,16,"Double Decker Gift Stores, Ltd",United Kingdom,London,NA,WA1 1DP,Shipped,8386.77
+10214,16,"Corrida Auto Replicas, Ltd",Spain,Madrid,NA,28023,Shipped,16589.74
+10215,16,West Coast Collectables Co.,United States,Burbank,CA,94019,Shipped,33271.67
+10216,15,Auto Assoc. & Cie.,France,Versailles,NA,78000,Shipped,4300
+10217,15,Handji Gifts& Co,Singapore,Singapore,NA,69045,Shipped,20796.25
+10219,15,Signal Collectibles Ltd.,United States,Brisbane,CA,94217,Shipped,11878.16
+10220,15,"Clover Collections, Co.",Ireland,Dublin,NA,2,Shipped,25870.420000000002
+10221,15,Petit Auto,Belgium,Bruxelles,NA,B-1180,Shipped,15778.08
+10222,15,Collectable Mini Designs Co.,United States,San Diego,CA,91217,Shipped,58018.57
+10223,15,"Australian Collectors, Co.",Australia,Melbourne,Victoria,3004,Shipped,42831.94
+10224,15,Daedalus Designs Imports,France,Lille,NA,59000,Shipped,18053.29
+10225,15,"Vida Sport, Ltd",Switzerland,Gensve,NA,1203,Shipped,40418.84
+10226,15,Collectable Mini Designs Co.,United States,San Diego,CA,91217,Shipped,20443.5
+10227,14,"Saveley & Henriot, Co.",France,Lyon,NA,69004,Shipped,38564.55
+10228,14,Cambridge Collectables Co.,United States,Cambridge,MA,51247,Shipped,17766.95
+10229,14,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,40057.92
+10230,14,"Blauer See Auto, Co.",Germany,Frankfurt,NA,60528,Shipped,28299.3
+10231,14,CAF Imports,Spain,Madrid,NA,28023,Shipped,9100
+10232,14,giftsbymail.co.uk,United Kingdom,Cowes,Isle of Wight,PO31 7PJ,Shipped,24447.72
+10233,14,Tekni Collectables Inc.,United States,Newark,NJ,94019,Shipped,8722.119999999999
+10235,13,"Royal Canadian Collectables, Ltd.",Canada,Tsawassen,BC,T2F 8M4,Shipped,31144.76
+10236,13,Motor Mint Distributors Inc.,United States,Philadelphia,PA,71270,Shipped,6635.16
+10237,13,Vitachrome Inc.,United States,New York,NY,10022,Shipped,19941.4
+10238,13,Danish Wholesale Imports,Denmark,Kobenhavn,NA,1734,Shipped,24482.260000000002
+10239,13,"Oulu Toy Supplies, Inc.",Finland,Oulu,NA,90110,Shipped,13850.4
+10240,13,Osaka Souveniers Co.,Japan,Osaka,Osaka,530-0003,Shipped,11500
+10241,13,Mini Caravy,France,Strasbourg,NA,67000,Shipped,32981.83
+10242,13,Microscale Inc.,United States,New York,NY,10022,Shipped,1698.78
+10243,13,Diecast Collectables,United States,Boston,MA,51003,Shipped,5674.82
+10244,13,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,25026.39
+10245,12,Super Scale Inc.,United States,New Haven,CT,97823,Shipped,28837.19
+10246,12,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,31705.99
+10247,12,Suominen Souveniers,Finland,Espoo,NA,FIN-02271,Shipped,19517.05
+10248,12,Land of Toys Inc.,United States,New York,NY,10022,Cancelled,40345.5
+10249,12,Cambridge Collectables Co.,United States,Cambridge,MA,51247,Shipped,13380.42
+10250,12,The Sharp Gifts Warehouse,United States,San Jose,CA,94217,Shipped,42564.79
+10251,12,Tekni Collectables Inc.,United States,Newark,NJ,94019,Shipped,20474.22
+10252,12,Auto Canal Petit,France,Paris,NA,75016,Shipped,23989.98
+10253,11,"UK Collectables, Ltd.",United Kingdom,Liverpool,NA,WX1 6LT,Cancelled,38855.28
+10255,11,Mini Caravy,France,Strasbourg,NA,67000,Shipped,4090.9
+10256,11,Danish Wholesale Imports,Denmark,Kobenhavn,NA,1734,Shipped,4749.45
+10257,11,The Sharp Gifts Warehouse,United States,San Jose,CA,94217,Shipped,16128.099999999999
+10258,11,"Tokyo Collectables, Ltd",Japan,Minato-ku,Tokyo,106-0032,Shipped,17526.87
+10259,11,Handji Gifts& Co,Singapore,Singapore,NA,69045,Shipped,37451.74
+10261,11,Quebec Home Shopping Network,Canada,Montreal,Quebec,H1J 1C3,Shipped,22973.690000000002
+10262,11,Euro Shopping Channel,Spain,Madrid,NA,28034,Cancelled,47639.229999999996
+10263,11,Gift Depot Inc.,United States,Bridgewater,CT,97562,Shipped,36637.74
+10264,11,Gifts4AllAges.com,United States,Boston,MA,51003,Shipped,19137.75
+10265,10,"Australian Collectables, Ltd",Australia,Glen Waverly,Victoria,3150,Shipped,8807.8
+10266,10,L'ordine Souveniers,Italy,Reggio Emilia,NA,42100,Shipped,42607.27
+10267,10,Muscle Machine Inc,United States,New York,NY,10022,Shipped,22095.48
+10269,10,Salzburg Collectables,Austria,Salzburg,NA,5020,Shipped,6693.280000000001
+10270,10,Souveniers And Things Co.,Australia,Sydney,NSW,2067,Shipped,33536.79
+10271,10,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,32754.89
+10272,10,Diecast Classics Inc.,United States,Allentown,PA,70267,Shipped,17951.61
+10273,10,Petit Auto,Belgium,Bruxelles,NA,B-1180,Shipped,44378.15
+10274,10,Collectables For Less Inc.,United States,Houston,MA,58339,Shipped,12486.8
+10275,10,La Rochelle Gifts,France,Nantes,NA,44000,Shipped,49791.54
+10276,9,Online Mini Collectables,United States,Houston,MA,58339,Shipped,43885.01
+10277,9,"Dragon Souveniers, Ltd.",Singapore,Singapore,NA,79903,Shipped,2800
+10278,9,Signal Gift Stores,United States,Las Vegas,NV,83030,Shipped,27725.33
+10279,9,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,19837.309999999998
+10280,9,Amica Models & Co.,Italy,Torino,NA,10100,Shipped,45538.28
+10281,9,Diecast Classics Inc.,United States,Allentown,PA,70267,Shipped,37630.84
+10282,9,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,39900.27
+10283,9,"Royal Canadian Collectables, Ltd.",Canada,Tsawassen,BC,T2F 8M4,Shipped,40347.57
+10284,9,"Norway Gifts By Mail, Co.",Norway,Oslo,NA,N 0106,Shipped,32709.79
+10285,9,Marta's Replicas Co.,United States,Cambridge,MA,51247,Shipped,40632.52
+10286,9,"La Corne D'abondance, Co.",France,Paris,NA,75012,Shipped,2173.6
+10287,9,"Vida Sport, Ltd",Switzerland,Gensve,NA,1203,Shipped,52926.07
+10288,8,Handji Gifts& Co,Singapore,Singapore,NA,69045,Shipped,36055.62
+10289,8,Herkku Gifts,Norway,Bergen,NA,N 5804,Shipped,11622.78
+10290,8,Auto-Moto Classics Inc.,United States,Houston,MA,58339,Shipped,7001.98
+10291,8,Scandinavian Gift Ideas,Sweden,Boras,NA,S-844 67,Shipped,43650.13
+10292,8,Land of Toys Inc.,United States,New York,NY,10022,Shipped,31775.92
+10293,8,Amica Models & Co.,Italy,Torino,NA,10100,Shipped,27106.73
+10294,8,Online Mini Collectables,United States,Houston,MA,58339,Shipped,4500
+10295,8,Gifts4AllAges.com,United States,Boston,MA,51003,Shipped,14243.66
+10296,8,"Bavarian Collectables Imports, Co.",Germany,Munich,NA,80686,Shipped,32701.58
+10297,8,"Clover Collections, Co.",Ireland,Dublin,NA,2,Shipped,17366.82
+10298,8,Atelier graphique,France,Nantes,NA,44000,Shipped,5307.9800000000005
+10299,8,"Toys of Finland, Co.",Finland,Helsinki,NA,21240,Shipped,32521.06
+10300,19,"Blauer See Auto, Co.",Germany,Frankfurt,NA,60528,Shipped,21957.2
+10301,19,"Norway Gifts By Mail, Co.",Norway,Oslo,NA,N 0106,Shipped,31843
+10302,19,"UK Collectables, Ltd.",United Kingdom,Liverpool,NA,WX1 6LT,Shipped,22339.4
+10303,7,"Iberia Gift Imports, Corp.",Spain,Sevilla,NA,41101,Shipped,3220.88
+10304,7,Auto Assoc. & Cie.,France,Versailles,NA,78000,Shipped,49064.97
+10305,7,Marta's Replicas Co.,United States,Cambridge,MA,51247,Shipped,41586.87
+10306,7,"AV Stores, Co.",United Kingdom,Manchester,NA,EC2 5NT,Shipped,48457.96
+10307,7,"Classic Gift Ideas, Inc",United States,Philadelphia,PA,71270,Shipped,23472.54
+10308,7,Mini Classics,United States,White Plains,NY,24067,Shipped,42230.8
+10309,7,Baane Mini Imports,Norway,Stavern,NA,4110,Shipped,16864.44
+10310,7,"Toms Spezialitten, Ltd",Germany,Koln,NA,50739,Shipped,53162.19
+10311,7,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,33158.2
+10312,7,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,47591.98
+10313,7,Canadian Gift Exchange Network,Canada,Vancouver,BC,V3F 2K1,Shipped,29277.02
+10314,7,Heintze Collectables,Denmark,Aaarhus,NA,8200,Shipped,44705.58
+10315,7,La Rochelle Gifts,France,Nantes,NA,44000,Shipped,20002.7
+10316,6,giftsbymail.co.uk,United Kingdom,Cowes,Isle of Wight,PO31 7PJ,Shipped,48722.41
+10317,6,Technics Stores Inc.,United States,Burlingame,CA,94217,Shipped,2916.2
+10318,6,Diecast Classics Inc.,United States,Allentown,PA,70267,Shipped,34629.02
+10319,6,Microscale Inc.,United States,New York,NY,10022,Shipped,26506.45
+10320,6,"Volvo Model Replicas, Co",Sweden,Lule,NA,S-958 22,Shipped,13481.94
+10321,6,FunGiftIdeas.com,United States,New Bedford,MA,50553,Shipped,40455.67
+10322,6,Online Diecast Creations Co.,United States,Nashua,NH,62005,Shipped,40352.26
+10323,6,"Blauer See Auto, Co.",Germany,Frankfurt,NA,60528,Shipped,7711.91
+10324,6,Vitachrome Inc.,United States,New York,NY,10022,Shipped,41614.23
+10325,6,Baane Mini Imports,Norway,Stavern,NA,4110,Shipped,28998.59
+10326,6,"Volvo Model Replicas, Co",Sweden,Lule,NA,S-958 22,Shipped,19305.35
+10327,6,Danish Wholesale Imports,Denmark,Kobenhavn,NA,1734,Resolved,22022.96
+10328,6,Rovelli Gifts,Italy,Bergamo,NA,24100,Shipped,40068.8
+10329,6,Land of Toys Inc.,United States,New York,NY,10022,Shipped,45540.89
+10330,6,Cruz & Sons Co.,Philippines,Makati City,NA,1227 MM,Shipped,14122.53
+10331,6,Motor Mint Distributors Inc.,United States,Philadelphia,PA,71270,Shipped,37225.4
+10332,6,"AV Stores, Co.",United Kingdom,Manchester,NA,EC2 5NT,Shipped,44900.22
+10333,6,Mini Wheels Co.,United States,San Francisco,CA,NA,Shipped,22684.86
+10334,6,"Volvo Model Replicas, Co",Sweden,Lule,NA,S-958 22,On Hold,20386.92
+10335,6,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,8049.29
+10336,6,"La Corne D'abondance, Co.",France,Paris,NA,75012,Shipped,41019.89
+10337,6,Classic Legends Inc.,United States,New York,NY,10022,Shipped,23858.72
+10338,6,Royale Belge,Belgium,Charleroi,NA,B-6000,Shipped,10912.24
+10339,6,"Tokyo Collectables, Ltd",Japan,Minato-ku,Tokyo,106-0032,Shipped,49189.06
+10340,6,Enaco Distributors,Spain,Barcelona,NA,8022,Shipped,28005.99
+10341,6,Salzburg Collectables,Austria,Salzburg,NA,5020,Shipped,37510.95
+10342,6,"Australian Collectors, Co.",Australia,Melbourne,Victoria,3004,Shipped,33996.15
+10343,6,Reims Collectables,France,Reims,NA,51100,Shipped,15520.39
+10344,6,Marseille Mini Autos,France,Marseille,NA,13008,Shipped,15955.55
+10345,6,Atelier graphique,France,Nantes,NA,44000,Shipped,2311.68
+10346,6,Signal Gift Stores,United States,Las Vegas,NV,83030,Shipped,13146.939999999999
+10347,6,"Australian Collectors, Co.",Australia,Melbourne,Victoria,3004,Shipped,37629.79
+10348,6,"Corrida Auto Replicas, Ltd",Spain,Madrid,NA,28023,Shipped,25725.93
+10349,5,Muscle Machine Inc,United States,New York,NY,10022,Shipped,30647.37
+10350,5,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,46913.2
+10351,5,"Stylish Desk Decors, Co.",United Kingdom,London,NA,WX3 6FW,Shipped,12365.3
+10352,5,Auto-Moto Classics Inc.,United States,Houston,MA,58339,Shipped,11440.58
+10353,5,Gift Ideas Corp.,United States,Glendale,CT,97561,Shipped,27383.809999999998
+10355,5,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,24873.2
+10356,5,Lyon Souveniers,France,Paris,NA,75508,Shipped,24173.81
+10357,5,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,35494.34
+10358,5,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,40885.74
+10359,5,Reims Collectables,France,Reims,NA,51100,Shipped,24090.3
+10361,5,Souveniers And Things Co.,Australia,Sydney,NSW,2067,Shipped,34788.28
+10362,4,Technics Stores Inc.,United States,Burlingame,CA,94217,Shipped,10388.41
+10363,4,Suominen Souveniers,Finland,Espoo,NA,FIN-02271,Shipped,43870.02
+10364,4,Marseille Mini Autos,France,Marseille,NA,13008,Shipped,2317.44
+10365,4,Mini Creations Ltd.,United States,New Bedford,MA,50553,Shipped,9211.8
+10366,4,Royale Belge,Belgium,Charleroi,NA,B-6000,Shipped,11700
+10367,4,Toys4GrownUps.com,United States,Pasadena,CA,90003,Resolved,35761.9
+10368,4,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,14471.76
+10369,4,Collectables For Less Inc.,United States,Houston,MA,58339,Shipped,25838.06
+10370,4,"Anna's Decorations, Ltd",Australia,Sydney,NSW,2060,Shipped,21931.29
+10371,4,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,30820.8
+10372,4,"Tokyo Collectables, Ltd",Japan,Minato-ku,Tokyo,106-0032,Shipped,30186.16
+10373,4,"Oulu Toy Supplies, Inc.",Finland,Oulu,NA,90110,Shipped,47182.82
+10374,3,"Australian Gift Network, Co",Australia,South Brisbane,Queensland,4101,Shipped,18310.54
+10375,3,La Rochelle Gifts,France,Nantes,NA,44000,Shipped,48561.27
+10376,3,Boards & Toys Co.,United States,Glendale,CA,92561,Shipped,3500
+10377,3,"Toys of Finland, Co.",Finland,Helsinki,NA,21240,Shipped,19728.48
+10378,3,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,29055.84
+10379,3,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,13597.66
+10380,3,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,34521.16
+10381,3,Corporate Gift Ideas Co.,United States,San Francisco,CA,NA,Shipped,27349.65
+10382,3,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,42037.02
+10383,3,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,33378.67
+10384,3,Corporate Gift Ideas Co.,United States,San Francisco,CA,NA,Shipped,14763.53
+10385,3,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,5098.48
+10386,2,Euro Shopping Channel,Spain,Madrid,NA,28034,Resolved,51380.58
+10387,2,"Dragon Souveniers, Ltd.",Singapore,Singapore,NA,79903,Shipped,4175.6
+10388,2,FunGiftIdeas.com,United States,New Bedford,MA,50553,Shipped,27454.79
+10389,2,Scandinavian Gift Ideas,Sweden,Boras,NA,S-844 67,Shipped,27884.28
+10390,2,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,49052.82
+10391,2,"Anna's Decorations, Ltd",Australia,Sydney,NSW,2060,Shipped,25610
+10392,2,Mini Auto Werke,Austria,Graz,NA,8010,Shipped,8339.2
+10394,2,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,17016.510000000002
+10395,2,Lyon Souveniers,France,Paris,NA,75508,Shipped,14580.96
+10396,2,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,Shipped,26351.62
+10397,2,Alpha Cognac,France,Toulouse,NA,31000,Shipped,14556.76
+10398,2,Reims Collectables,France,Reims,NA,51100,Shipped,48728.82
+10400,1,The Sharp Gifts Warehouse,United States,San Jose,CA,94217,Shipped,29724.16
+10401,1,Tekni Collectables Inc.,United States,Newark,NJ,94019,On Hold,46391.08
+10402,1,Auto Canal Petit,France,Paris,NA,75016,Shipped,12733
+10403,1,"UK Collectables, Ltd.",United Kingdom,Liverpool,NA,WX1 6LT,Shipped,32055.91
+10405,1,Mini Caravy,France,Strasbourg,NA,67000,Shipped,28751.6
+10406,1,Danish Wholesale Imports,Denmark,Kobenhavn,NA,1734,Disputed,17400
+10407,1,The Sharp Gifts Warehouse,United States,San Jose,CA,94217,On Hold,47965.99
+10408,1,"Tokyo Collectables, Ltd",Japan,Minato-ku,Tokyo,106-0032,Shipped,553.95
+10409,1,Handji Gifts& Co,Singapore,Singapore,NA,69045,Shipped,2401.94
+10411,0,Quebec Home Shopping Network,Canada,Montreal,Quebec,H1J 1C3,Shipped,26262.77
+10412,0,Euro Shopping Channel,Spain,Madrid,NA,28034,Shipped,39723.61
+10413,0,Gift Depot Inc.,United States,Bridgewater,CT,97562,Shipped,19849.39
+10414,0,Gifts4AllAges.com,United States,Boston,MA,51003,On Hold,44166.21
+10415,0,"Australian Collectables, Ltd",Australia,Glen Waverly,Victoria,3150,Disputed,13268.84
+10416,0,L'ordine Souveniers,Italy,Reggio Emilia,NA,42100,Shipped,37493.17
+10417,0,Euro Shopping Channel,Spain,Madrid,NA,28034,Disputed,24502.48
+10419,0,Salzburg Collectables,Austria,Salzburg,NA,5020,Shipped,46475.4
+10420,0,Souveniers And Things Co.,Australia,Sydney,NSW,2067,In Process,41859.74
+10421,0,Mini Gifts Distributors Ltd.,United States,San Rafael,CA,97562,In Process,5328
+10422,0,Diecast Classics Inc.,United States,Allentown,PA,70267,In Process,6166.8
+10423,0,Petit Auto,Belgium,Bruxelles,NA,B-1180,In Process,8411.95
+10424,0,Euro Shopping Channel,Spain,Madrid,NA,28034,In Process,23280.98
+10425,0,La Rochelle Gifts,France,Nantes,NA,44000,In Process,35554.31

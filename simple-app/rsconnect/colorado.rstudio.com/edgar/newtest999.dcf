@@ -1,0 +1,12 @@
+name: newtest999
+title: newtest999
+username: edgar
+account: edgar
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 2739
+bundleId: 26444
+url: https://colorado.rstudio.com/rsc/content/2739/
+when: 1565386480.80413
+asMultiple: FALSE
+asStatic: FALSE
