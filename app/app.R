@@ -35,9 +35,12 @@ cust_colors <- c(
 ui <- dashboardPage(
   skin = "black",
   dashboardHeader(
-    title = textOutput("title"),
-    titleWidth = 400,
-    dropdownMenuOutput("user_info")
+    #title = textOutput("title"),
+    title = "Sales Dashboard",
+    titleWidth = 250,
+    dropdownMenuOutput("user_info"),
+    dropdownMenuOutput("sec_groups"),
+    dropdownMenuOutput("entitlements")
   ),
   dashboardSidebar(disable = TRUE),
   dashboardBody(
@@ -90,8 +93,6 @@ ui <- dashboardPage(
   )
 )
 
-
-
 server <- function(input, output, session) {
   if (Sys.getenv("R_CONFIG_ACTIVE") == "rsconnect") {
     user_name <- session$user
@@ -107,10 +108,10 @@ server <- function(input, output, session) {
   }
   entitlements <- read_csv("data-entitlements.csv") %>%
     filter(user == user_ent)
-  
+
   sales <- read_csv("data-sales.csv") %>%
     inner_join(select(entitlements, country), by = "country")
-  
+
   filtered_orders <- reactive({
     if (input$year == max(years)) {
       from <- 0
@@ -178,25 +179,33 @@ server <- function(input, output, session) {
     )
   })
   output$user_info <- renderMenu({
-    grps <- c(
-      list(notificationItem("Security Groups", icon = icon("users"))),
-      map(user_groups, notificationItem, icon = icon(""))
-    )
-    ent <- c(
-      list(notificationItem("Entitlements", icon = icon("map-marker-alt"))),
-      map(pull(entitlements, country), notificationItem, icon = icon(""))
-    )
-    user <- c(
-      list(notificationItem("Logged in as", icon = icon("user"))),
-      list(notificationItem(user_name, icon = icon("")))
-    )
-    notif <- c(user, ent, grps)
+    user <- list(notificationItem(user_name, icon = icon("user")))
     dropdownMenu(
-      headerText = "User information",
+      headerText = "Logged in as",
       type = "notifications",
       badgeStatus = NULL,
-      .list = notif,
+      .list = user,
       icon = icon("user")
+    )
+  })
+  output$sec_groups <- renderMenu({
+    grps <- map(user_groups, notificationItem, icon = icon("users"))
+    dropdownMenu(
+      headerText = "Security Groups",
+      type = "notifications",
+      badgeStatus = NULL,
+      .list = grps,
+      icon = icon("users")
+    )
+  })
+  output$entitlements <- renderMenu({
+    ent <- map(pull(entitlements, country), notificationItem, icon = icon("map-marker-alt"))
+    dropdownMenu(
+      headerText = "Assignments",
+      type = "notifications",
+      badgeStatus = NULL,
+      .list = ent,
+      icon = icon("map-marker-alt")
     )
   })
   output$products <- renderD3({
