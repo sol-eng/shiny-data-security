@@ -46,7 +46,14 @@ ui <- dashboardPage(
       tags$a(tags$b(textOutput("logged")))
     ),
     dropdownMenuOutput("entitlements"),
-    dropdownMenuOutput("sec_groups")
+    dropdownMenuOutput("sec_groups"),
+    tags$li(
+      class = "dropdown messages-menu",
+      tags$a(
+        "Get Code",
+        href = "https://github.com/sol-eng/shiny-data-security/blob/master/app/app.R"
+        )
+    )
   ),
   dashboardSidebar(disable = TRUE),
   dashboardBody(
