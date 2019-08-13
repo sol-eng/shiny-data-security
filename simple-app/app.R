@@ -1,9 +1,13 @@
 library(shiny)
 
 ui <- fluidPage(
-  titlePanel("Data Level Security test"),
-  mainPanel(textOutput("user"), 
-            textOutput("groups"))
+  titlePanel("Data Level Security"),
+  mainPanel(
+    tags$h2("Logged in as: "), 
+    tags$h3(textOutput("user")), 
+    tags$h2("Security Groups: "),
+    tags$h3(textOutput("groups"))
+    )
   )
 
 server <- function(input, output, session) {
@@ -17,7 +21,7 @@ server <- function(input, output, session) {
     user_groups <- c("group1", "group2")
   }
   output$user <- renderText(user_name)
-  output$groups <- renderText(user_groups)
+  output$groups <- renderText(paste0(user_groups, collapse = ", "))
 }
 
 shinyApp(ui = ui, server = server)
