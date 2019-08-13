@@ -2,11 +2,13 @@ library(shiny)
 library(shinydashboard)
 library(dplyr)
 library(stringr)
-library(readr)
 library(purrr)
 library(r2d3)
 library(lubridate)
 library(leaflet)
+library(DBI)
+library(RSQLite)
+library(dbplyr)
 
 # Formatting functions --------------------------
 month_date <- function(x) floor_date(today(), unit = "month") - months(x)
@@ -23,21 +25,28 @@ pretty_num <- function(nmbr) {
 }
 # Variable sets ---------------------------------
 years <- c(year(today()), year(today()) - 1)
-cust_colors <- c(
-  "blue", "orange", "lightgray", "green", "lightblue",
-  "gray", "pink", "purple", "lightgreen", "red"
+cust_colors <- tibble(
+  rank = 1:10,
+  color = c(
+    "blue", "orange", "lightgray", "green", "lightblue",
+    "gray", "pink", "purple", "lightgreen", "red"
+  )
 )
+# Connects to database --------------------------
+con <- dbConnect(SQLite(), "sales.sqlite")
 # Lat/Lon city coordinates ----------------------
-cities <- read_csv("data-cities.csv")
+cities <- tbl(con, "cities")
 # Shiny UI --------------------------------------
 ui <- dashboardPage(
   skin = "black",
   dashboardHeader(
     title = "Sales Dashboard",
-    titleWidth = 250,
-    dropdownMenuOutput("user_info"),
-    dropdownMenuOutput("sec_groups"),
-    dropdownMenuOutput("entitlements")
+    tags$li(
+      class = "dropdown messages-menu",
+      tags$a(tags$b(textOutput("logged")))
+    ),
+    dropdownMenuOutput("entitlements"),
+    dropdownMenuOutput("sec_groups")
   ),
   dashboardSidebar(disable = TRUE),
   dashboardBody(
@@ -99,55 +108,69 @@ server <- function(input, output, session) {
     user_name <- "edgar"
     user_groups <- c("sec1", "sec2")
   }
-  # Pulls entitlements --------------------------
-  entitlements_raw <- read_csv("data-entitlements.csv")
 
+  # Pulls entitlements --------------------------
+  entitlements_raw <- tbl(con, "entitlements")
   users <- entitlements_raw %>%
     group_by(user) %>%
     summarise() %>%
     pull()
 
-  if(user_name %in% users) {
+  if (user_name %in% users) {
     user_ent <- user_name
   } else {
     user_ent <- "generic"
   }
+  # Only allowed data to be seen by user --------
   entitlements <- entitlements_raw %>%
-    filter(user == user_ent)
-
-  sales <- read_csv("data-sales.csv") %>%
-    inner_join(select(entitlements, country), by = "country")
-
-  filtered_orders <- reactive({
+    filter(user == user_ent) %>%
+    select(country)
+  sales <- tbl(con, "sales") %>%
+    inner_join(entitlements, by = "country")
+  # Month range based on the year selection -----
+  year_range <- reactive({
     if (input$year == max(years)) {
-      from <- 0
-      to <- 11
+      list(from = 0, to = 11)
     } else {
-      from <- 12
-      to <- 23
+      list(from = 12, to = 23)
     }
+  })
+  # Shared order data set -----------------------
+  filtered_orders <- reactive({
+    ft <- year_range()
     sales %>%
-      filter(month_relative >= from, month_relative <= to) %>%
+      filter(month_relative >= !!ft$from, month_relative <= !!ft$to) %>%
       group_by(order_number, month_relative, customer_name, country, city, state, postal_code, status) %>%
-      summarise(total_sale = sum(quantity * unit_price)) %>%
+      summarise(total_sale = sum(quantity * unit_price, na.rm = TRUE)) %>%
       ungroup()
   })
-  filtered_products <- reactive({
-    if (input$year == max(years)) {
-      from <- 0
-      to <- 11
-    } else {
-      from <- 12
-      to <- 23
-    }
-    sales %>%
-      filter(month_relative >= from, month_relative <= to) %>%
-      group_by(product) %>%
-      summarise(total_sale = sum(quantity * unit_price))
+  # Output section ------------------------------
+  # >> User security section --------------------
+  output$logged <- renderText(user_name)
+  output$entitlements <- renderMenu({
+    ent <- map(pull(entitlements, country), notificationItem, icon = icon("map-marker-alt"))
+    dropdownMenu(
+      headerText = "Assignments",
+      type = "notifications",
+      badgeStatus = NULL,
+      .list = ent,
+      icon = icon("map-marker-alt")
+    )
   })
+  output$sec_groups <- renderMenu({
+    grps <- map(user_groups, notificationItem, icon = icon("users"))
+    dropdownMenu(
+      headerText = "Security Groups",
+      type = "notifications",
+      badgeStatus = NULL,
+      .list = grps,
+      icon = icon("users")
+    )
+  })
+  # >> Value boxes section ----------------------
   output$total_sales <- renderValueBox(
     filtered_orders() %>%
-      summarise(sum(total_sale)) %>%
+      summarise(sum(total_sale, na.rm = TRUE)) %>%
       pull() %>%
       pretty_num() %>%
       paste0("$", .) %>%
@@ -169,69 +192,24 @@ server <- function(input, output, session) {
       pretty_num() %>%
       valueBox(subtitle = "Canceled Orders", icon = icon("times"), color = "purple")
   )
-  output$messages <- renderMenu({
-    latest <- filtered_orders() %>%
-      filter(order_number == max(order_number)) %>%
-      select(customer_name, total_sale) %>%
-      collect()
-    dropdownMenu(
-      headerText = "Newest sale",
-      type = "messages",
-      messageItem(
-        latest$customer_name,
-        paste0("$", prettyNum(latest$total_sale, big.mark = ",")),
-        icon = icon("credit-card")
-      )
-    )
-  })
-  output$user_info <- renderMenu({
-    user <- list(notificationItem(user_name, icon = icon("user")))
-    dropdownMenu(
-      headerText = "Logged in as",
-      type = "notifications",
-      badgeStatus = NULL,
-      .list = user,
-      icon = icon("user")
-    )
-  })
-  output$sec_groups <- renderMenu({
-    grps <- map(user_groups, notificationItem, icon = icon("users"))
-    dropdownMenu(
-      headerText = "Security Groups",
-      type = "notifications",
-      badgeStatus = NULL,
-      .list = grps,
-      icon = icon("users")
-    )
-  })
-  output$entitlements <- renderMenu({
-    ent <- map(pull(entitlements, country), notificationItem, icon = icon("map-marker-alt"))
-    dropdownMenu(
-      headerText = "Assignments",
-      type = "notifications",
-      badgeStatus = NULL,
-      .list = ent,
-      icon = icon("map-marker-alt")
-    )
-  })
-  output$products <- renderD3({
-    filtered_products() %>%
-      arrange(product) %>%
-      collect() %>%
-      mutate(y_label = paste0("$", pretty_num(total_sale))) %>%
-      rename(x = product, y = total_sale, label = product) %>%
-      r2d3("bar-plot2.js")
-  })
-  output$customers <- renderD3({
+  # >> Top customer section ---------------------
+  top_customers <- reactive({
     filtered_orders() %>%
-      group_by(customer_name) %>%
+      left_join(cities, by = c("country", "city")) %>%
+      group_by(customer_name, country, city, lat, lng) %>%
       summarise(total_sale = sum(total_sale)) %>%
       arrange(desc(total_sale)) %>%
       head(10) %>%
       collect() %>%
+      ungroup() %>%
+      mutate(rank = row_number()) %>%
+      inner_join(cust_colors, by = "rank")
+  })
+  output$customers <- renderD3({
+    top_customers() %>%
       mutate(
         y_label = paste0("$", pretty_num(total_sale)),
-        fill = cust_colors
+        fill = color
       ) %>%
       rename(x = customer_name, y = total_sale, label = customer_name) %>%
       r2d3("bar-plot.js")
@@ -243,26 +221,27 @@ server <- function(input, output, session) {
       library = "ion",
       markerColor = cust_colors
     )
-    filtered_orders() %>%
-      left_join(cities, by = c("country", "city")) %>%
-      group_by(customer_name, country, city, lat, lng) %>%
-      summarise(total_sale = sum(total_sale)) %>%
-      arrange(desc(total_sale)) %>%
-      head(10) %>%
-      collect() %>%
+    top_customers() %>%
       leaflet() %>%
       addTiles() %>%
       addAwesomeMarkers(
-        lng = ~lng, lat = ~lat,
+        lng = ~ lng * (1 + (rank / 100)),
+        lat = ~lat,
         popup = ~ paste(
           paste0("<b>", customer_name, "</b>"),
           paste0("<i>", city, ", ", country, "</i>"),
           paste0("$", prettyNum(total_sale, big.mark = ",")),
           sep = "<br/>"
         ),
-        icon = icons
+        icon = awesomeIcons(
+          icon = "ios-open",
+          iconColor = "black",
+          library = "ion",
+          markerColor = ~color
+        )
       )
   })
+  # >> Order tab section ------------------------
   output$recent <- renderD3({
     filtered_orders() %>%
       arrange(desc(order_number)) %>%
@@ -272,6 +251,18 @@ server <- function(input, output, session) {
       mutate(label = paste0(order_number, " - ", customer_name)) %>%
       rename(x = customer_name, y = total_sale) %>%
       r2d3("bar-plot3.js")
+  })
+  output$products <- renderD3({
+    ft <- year_range()
+    sales %>%
+      filter(month_relative >= !!ft$from, month_relative <= !!ft$to) %>%
+      group_by(product) %>%
+      summarise(total_sale = sum(quantity * unit_price, na.rm = TRUE)) %>%
+      arrange(product) %>%
+      collect() %>%
+      mutate(y_label = paste0("$", pretty_num(total_sale))) %>%
+      rename(x = product, y = total_sale, label = product) %>%
+      r2d3("bar-plot2.js")
   })
 }
 

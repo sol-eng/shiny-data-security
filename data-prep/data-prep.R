@@ -49,8 +49,6 @@ sales <- sales_raw %>%
     city = ifelse(city == "Chatswood", "Sydney", city)
   )
 
-write_csv(sales, "app/data-sales.csv")
-
 orders <- sales %>%
   group_by(order_number, month_relative, customer_name, country, city, state, postal_code, status) %>%
   summarise(total_sale = sum(quantity * unit_price)) %>%
@@ -67,23 +65,33 @@ world2 <- world %>%
   ungroup() %>%
   select(- num)
 
-orders %>%
+cities <- orders %>%
   left_join(world2, by = c("country", "city"))  %>%
   group_by(country, city, lat, lng) %>%
   summarise() %>%
   filter(!is.na(lng)) %>%
-  write_csv("app/data-cities.csv")
+  ungroup()
 
 # orders %>% count(country, sort = TRUE)
 frodo <- tibble(
   user = "frodo",
   country = c("United States", "Canada")
 )
-generid <- tibble(
+generic <- tibble(
   user = "generic",
   country = c("France", "Spain",  "United Kingdom", "Ireland", "Italy", "Belgium")
 )
-frodo %>%
-  bind_rows(generic) %>%
-  write_csv("app/data-entitlements.csv")
+entitlements <- frodo %>%
+  bind_rows(generic)
+
+library(RSQLite)
+library(DBI)
+con <- dbConnect(SQLite(), "app/sales.sqlite")
+dbWriteTable(con, "cities", cities, overwrite = TRUE)
+dbWriteTable(con, "entitlements", entitlements, overwrite = TRUE)
+dbWriteTable(con, "sales", sales, overwrite = TRUE)
+dbDisconnect(con)
+
+
+
 
