@@ -1,6 +1,6 @@
 # Shiny Data Level Security 
 
-<img src="screenshot.png" width=400 height=300>
+<img src="screenshot.png" width=400>
 
 Published version: https://colorado.rstudio.com/rsc/sales/dashboard/
 
