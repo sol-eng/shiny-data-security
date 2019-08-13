@@ -8,13 +8,12 @@ library(r2d3)
 library(lubridate)
 library(leaflet)
 
+# Formatting functions --------------------------
 month_date <- function(x) floor_date(today(), unit = "month") - months(x)
-
 month_calc <- function(x) {
   fd <- floor_date(today(), unit = "month") - months(x)
   str_c(month(fd), "/", str_sub(year(fd), 3, 4))
 }
-
 pretty_num <- function(nmbr) {
   res <- nmbr
   if (nmbr[[1]] > 1000) res <- paste0(round(nmbr / 1000, 1), "k")
@@ -22,20 +21,18 @@ pretty_num <- function(nmbr) {
   if (nmbr[[1]] > 1000000000) res <- paste0(round(nmbr / 1000000000, 1), "B")
   res
 }
-
-cities <- read_csv("data-cities.csv")
-
+# Variable sets ---------------------------------
 years <- c(year(today()), year(today()) - 1)
-
 cust_colors <- c(
   "blue", "orange", "lightgray", "green", "lightblue",
   "gray", "pink", "purple", "lightgreen", "red"
 )
-
+# Lat/Lon city coordinates ----------------------
+cities <- read_csv("data-cities.csv")
+# Shiny UI --------------------------------------
 ui <- dashboardPage(
   skin = "black",
   dashboardHeader(
-    #title = textOutput("title"),
     title = "Sales Dashboard",
     titleWidth = 250,
     dropdownMenuOutput("user_info"),
@@ -92,21 +89,30 @@ ui <- dashboardPage(
     )
   )
 )
-
+# Shiny Server ----------------------------------
 server <- function(input, output, session) {
+  # Sets user and groups ------------------------
   if (Sys.getenv("R_CONFIG_ACTIVE") == "rsconnect") {
     user_name <- session$user
     user_groups <- session$groups
   } else {
-    user_name <- "frodo"
+    user_name <- "edgar"
     user_groups <- c("sec1", "sec2")
   }
-  if (user_name != "frodo") {
-    user_ent <- "generic"
+  # Pulls entitlements --------------------------
+  entitlements_raw <- read_csv("data-entitlements.csv")
+
+  users <- entitlements_raw %>%
+    group_by(user) %>%
+    summarise() %>%
+    pull()
+
+  if(user_name %in% users) {
+    user_ent <- user_name
   } else {
-    user_ent <- "frodo"
+    user_ent <- "generic"
   }
-  entitlements <- read_csv("data-entitlements.csv") %>%
+  entitlements <- entitlements_raw %>%
     filter(user == user_ent)
 
   sales <- read_csv("data-sales.csv") %>%
@@ -267,9 +273,6 @@ server <- function(input, output, session) {
       rename(x = customer_name, y = total_sale) %>%
       r2d3("bar-plot3.js")
   })
-  output$title <- renderText(
-    paste0(str_to_title(user_name), "'s Sales Dashboard")
-  )
 }
 
 shinyApp(ui = ui, server = server)

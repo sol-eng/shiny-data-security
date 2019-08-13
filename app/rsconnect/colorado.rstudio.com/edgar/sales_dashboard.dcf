@@ -5,8 +5,8 @@ account: edgar
 server: colorado.rstudio.com
 hostUrl: https://colorado.rstudio.com/rsc/__api__
 appId: 2759
-bundleId: 26463
+bundleId: 26465
 url: https://colorado.rstudio.com/rsc/sales/dashboard/
-when: 1565647961.66739
+when: 1565660391.75791
 asMultiple: FALSE
 asStatic: FALSE

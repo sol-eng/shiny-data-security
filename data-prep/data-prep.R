@@ -15,20 +15,19 @@ rel_month <- sales_raw %>%
 cus_id <- sales_raw %>%
   group_by(CUSTOMERNAME) %>%
   summarise() %>%
-  ungroup() %>% 
-  mutate(customer_id = row_number()) 
-  
+  ungroup() %>%
+  mutate(customer_id = row_number())
 
 sales <- sales_raw %>%
   inner_join(rel_month, by = c("YEAR_ID", "MONTH_ID")) %>%
   inner_join(cus_id, by = "CUSTOMERNAME") %>%
-  clean_names() %>% 
+  clean_names() %>%
   mutate(
     contactfirstname = iconv(enc2utf8(contactfirstname), sub = "byte"),
     contact = paste(contactlastname, contactfirstname)
   ) %>%
   select(
-    -orderdate, -addressline2, -dealsize, -qtr_id, -month_id, 
+    -orderdate, -addressline2, -dealsize, -qtr_id, -month_id,
     -year_id, -contactlastname, -contactfirstname, -sales
     ) %>%
   rename(
@@ -48,14 +47,14 @@ sales <- sales_raw %>%
     city = ifelse(city == "North Sydney", "Sydney", city),
     city = ifelse(city == "Brickhaven", "Houston", city),
     city = ifelse(city == "Chatswood", "Sydney", city)
-  ) 
+  )
 
 write_csv(sales, "app/data-sales.csv")
 
 orders <- sales %>%
   group_by(order_number, month_relative, customer_name, country, city, state, postal_code, status) %>%
   summarise(total_sale = sum(quantity * unit_price)) %>%
-  ungroup() 
+  ungroup()
 
 write_csv(orders, "data-prep/orders.csv")
 
@@ -75,16 +74,15 @@ orders %>%
   filter(!is.na(lng)) %>%
   write_csv("app/data-cities.csv")
 
-
+# orders %>% count(country, sort = TRUE)
 frodo <- tibble(
   user = "frodo",
   country = c("United States", "Canada")
 )
-generic <- tibble(
+generid <- tibble(
   user = "generic",
-  country = c("France", "Spain",  "United Kingdom", "Finland" )
+  country = c("France", "Spain",  "United Kingdom", "Ireland", "Italy", "Belgium")
 )
-
 frodo %>%
   bind_rows(generic) %>%
   write_csv("app/data-entitlements.csv")
